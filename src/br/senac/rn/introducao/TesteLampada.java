@@ -1,4 +1,4 @@
-package br.senac.rn.introducao.br.senac.rn.introducao.br.senac.rn.introducao;
+package br.senac.rn.introducao;
 
 import br.senac.rn.introducao.Lampada;
 
@@ -10,7 +10,7 @@ public class TesteLampada {
 
         lampada.acende();
 
-        lampada.FREQUENCIA = 100;
+        //lampada.FREQUENCIA = 100;
 
         System.out.println(lampada.FREQUENCIA);
 

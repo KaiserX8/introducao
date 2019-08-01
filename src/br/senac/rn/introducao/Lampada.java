@@ -12,7 +12,7 @@ public class Lampada {
     public Float comprimento;
     private Boolean estado = false;
 
-    public Lampada(String cor) {
+    public Lampada(String cor, int i) {
         this.cor = cor;
     }
 
