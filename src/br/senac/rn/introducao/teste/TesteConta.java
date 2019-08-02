@@ -5,7 +5,7 @@ import br.senac.rn.introducao.Conta;
 public class TesteConta {
     public static void main(String[] args){
 
-        Conta contaFelipe = new Conta(400.0);
+        Conta contaFelipe = new Conta();
 
         contaFelipe.setAgencia("0001-0");
         contaFelipe.setNumero("1239-4");
@@ -31,6 +31,9 @@ public class TesteConta {
         System.out.println(contaFelipe);
         System.out.println(contaJota);
 
+    }
+
+}
 //
 //        contaFelipe.deposita(300.0);
 //
@@ -43,6 +46,3 @@ public class TesteConta {
 //        System.out.println(contaFelipe); //depois do saque
 
 
-
-    }
-}

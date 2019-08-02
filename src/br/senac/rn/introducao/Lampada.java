@@ -6,14 +6,19 @@ public class Lampada {
 
     public final Integer FREQUENCIA = 60;
 
-    public Spring cor;
+    public String cor;
     public Integer potencia;
     public Integer tensao;
     public Float comprimento;
     private Boolean estado = false;
 
-    public Lampada(String cor, int i) {
+    public Lampada(String cor) {
         this.cor = cor;
+    }
+
+    public Lampada(String cor, Integer potencia) {
+        this.cor = cor;
+        this.potencia = potencia;
     }
 
     public void acende() {
@@ -33,7 +38,11 @@ public class Lampada {
 
     @Override
     public String toString() {
-        return "Lampada{" + "cor='" + cor + '\'' + ", estado=" + estado + '}';
+        return "Lampada{" +
+                "cor='" + cor + '\'' +
+                ", estado=" + estado +
+                '}';
+
     }
 
 }

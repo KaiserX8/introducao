@@ -1,13 +1,15 @@
 package br.senac.rn.introducao;
 
-import java.util.Set;
+public abstract class Conta {
 
-public class Conta {
+    protected String agencia;
+    protected String numero;
+    protected Double saldo = 0.0;
+    protected String titular;
 
-    private String agencia;
-    private String numero;
-    private Double saldo = 0.0;
-    private String titular;
+    public Conta() {
+
+    }
 
     public String getAgencia() {
         return agencia;
@@ -65,9 +67,7 @@ public class Conta {
     @Override
     public String toString() {
         return "Conta{" +
-                "agencia='" + agencia + '\'' +
-                ", numero='" + numero + '\'' +
-                ", saldo=" + saldo +
+                "saldo=" + saldo +
                 ", titular='" + titular + '\'' +
                 '}';
     }

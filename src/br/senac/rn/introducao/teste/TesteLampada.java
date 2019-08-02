@@ -1,4 +1,4 @@
-package br.senac.rn.introducao;
+package br.senac.rn.introducao.teste;
 
 import br.senac.rn.introducao.Lampada;
 
