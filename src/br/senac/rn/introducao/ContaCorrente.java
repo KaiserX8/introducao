@@ -2,18 +2,41 @@ package br.senac.rn.introducao;
 
 public class ContaCorrente extends Conta {
 
-    private double taxa;
+    private final Double TAXA = 1.0;
 
-    public void setTaxa(double taxa) {
-        this.taxa = taxa;
+    private Double limite = 0.0;
+
+    public void setLimite(Double limite) {
+        this.limite = limite;
+    }
+
+    public Double getLimite() {
+        return limite;
     }
 
     public double getTaxa() {
-        return taxa;
+        return TAXA;
+    }
+
+    @Override
+    public Boolean saca(Double valor) {
+        Double valorComTaxa = valor + TAXA;
+        Double saldoComLimite = saldo + limite;
+        if (valorComTaxa <= saldoComLimite){
+            saldo -= valorComTaxa;
+            return true;
+        }
+        System.out.println("SALDO INSUFICIENTE");
+        return false;
     }
 
     @Override
     public String toString() {
         return "ContaCorrente{" + super.toString() + '}';
+    }
+
+    @Override
+    public void setLimite(double v) {
+
     }
 }

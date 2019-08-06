@@ -2,6 +2,7 @@ package br.senac.rn.introducao;
 
 public abstract class Conta {
 
+    public Object setLimite;
     protected String agencia;
     protected String numero;
     protected Double saldo = 0.0;
@@ -39,36 +40,32 @@ public abstract class Conta {
         this.titular = titular;
     }
 
-    public Conta(Double saldo) {
-        setSaldo(saldo);
-    }
-
-    public void setSaldo(Double saldo) {
-        if (saldo >= 0) {
-            this.saldo = saldo;
-        } else {
-            this.saldo = 0.0;
-        }
-    }
-
     public void deposita(Double valor) {
         saldo += valor;
     }
 
-    public void saca(Double valor) {
-        saldo -= valor;
+    public abstract Boolean saca(Double valor);
+
+    public Boolean transfere(Double valor) {
+        if (valor < 0) {
+            saldo += valor;
+            return true;
+        }
+        return false;
     }
 
-    public void transfere(Conta contaDestino, Double valor) {
-    saca(valor);
-    contaDestino.deposita(valor);
+    public Boolean transfere(Conta contaDestino, Double valor) {
+        if (saca(valor)) {
+            contaDestino.deposita(valor);
+            return true;
+        }
+        return false;
     }
 
     @Override
     public String toString() {
-        return "Conta{" +
-                "saldo=" + saldo +
-                ", titular='" + titular + '\'' +
-                '}';
+        return "saldo=" + saldo + ", titular='" + titular + "'";
     }
+
+    public abstract void setLimite(double v);
 }

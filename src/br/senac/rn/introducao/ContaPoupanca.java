@@ -8,4 +8,22 @@ public class ContaPoupanca extends Conta{
         saldo = saldo + saldo * RENDIMENTO;
     }
 
+    @Override
+    public Boolean saca(Double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+        }
+        System.out.println("SALDO INSUFICIENTE");
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "ContaCorrente{" + super.toString() + '}';
+    }
+
+    @Override
+    public void setLimite(double v) {
+
+    }
 }
