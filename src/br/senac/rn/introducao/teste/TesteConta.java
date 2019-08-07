@@ -10,7 +10,7 @@ public class TesteConta {
 
         contaFelipe.setAgencia("0001-0");
         contaFelipe.setNumero("1239-4");
-        contaFelipe.setTitular("Filipe Vasco");
+//        contaFelipe.setTitular("Filipe Vasco");
 
         contaFelipe.deposita(80.0);
 
@@ -21,7 +21,7 @@ public class TesteConta {
 
         contaJota.setAgencia("0003-2");
         contaJota.setNumero("5314-5");
-        contaJota.setTitular("Jota Lopes");
+//        contaJota.setTitular("Jota Lopes");
 
         contaJota.deposita(200.0);
 
