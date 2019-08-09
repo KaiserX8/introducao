@@ -1,4 +1,4 @@
-package ListaDeExercicios;
+package ListaDeExercicios.exercicio2;
 
 public class Quadrado {
 

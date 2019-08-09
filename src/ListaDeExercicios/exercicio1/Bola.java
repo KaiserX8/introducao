@@ -1,4 +1,4 @@
-package ListaDeExercicios;
+package ListaDeExercicios.exercicio1;
 
 public class Bola {
 

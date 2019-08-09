@@ -1,4 +1,6 @@
-package ListaDeExercicios;
+package ListaDeExercicios.exercicio1;
+
+import ListaDeExercicios.exercicio1.Bola;
 
 public class TestaBola {
     public static void main(String[] args) {
